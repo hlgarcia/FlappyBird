@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+        
+        <style>
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            ::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px grey;
+                border-radius: 10px;
+            }
+          
+            ::-webkit-scrollbar-thumb {
+                background: #3074a0;
+                border-radius: 5px;
+            }
+            
+            html {
+                background: url(http://digitalbreed.com/wp-content/uploads/2014/02/13-repeating-pipes.gif);
+                height: 760px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+            .instructions {
+                position: absolute;
+                background-color: rgba(160, 209, 206, 0.8) ;
+                border: #f5a24e 6px groove;
+                width: 50%;
+                height: 520px;
+                margin: 250px 20px 50px 600px;
+            }
+        
+            .showcase {
+                position: absolute;
+                right: 0;
+                width: 100%;
+                display: flex;     
+            }
+        
+            .showcase h1 {
+                position: absolute;
+                margin-top: 20px;
+                margin-bottom: 70px;
+                width: 100%;
+                padding: 40px 100px;
+                z-index: 2;
+                font-size: 90px;
+                font-family: 'Press Start 2P', cursive;
+                text-align: center;
+                color: black;
+            }
+      
+            .t1 {
+                font-family: 'Ranchers', cursive;
+                text-align: center;
+                font-size: 50px;
+                color: black;
+            }
+        
+            .t2 {
+                font-family: 'Ranchers', cursive;
+                text-align: center;
+                font-size: 35px;
+                padding-right: 3px;
+                padding-left: 3px;
+                margin-top: 50px;
+            }
+       
+            .t3 {
+                font-family: 'Ranchers', cursive;
+                text-align: center;
+                font-size: 35px;
+                padding-right: 3px;
+                padding-left: 3px;
+                padding-top: 15px;
+            }
+      
+            .game {
+                position: absolute;
+                background-color: rgba(245, 245, 220, 0.8);
+                width: 35%;
+                height: 250px;
+                border: #f5a24e 6px groove;
+                margin: 250px 650px 40px 50px;
+                font-family: 'Press Start 2P', cursive;
+            }
+     
+            .about {
+                position: absolute;
+                background-color: rgba(245, 245, 220, 0.8);
+                width: 35%;
+                height: 250px;
+                border: #f5a24e 6px groove;
+                margin: 520px 650px 50px 50px;
+            }
+        
+            .b1 {
+                width: 45%;
+                height: 50px;
+                background-color: #99e74b;
+                font-family: 'Press Start 2P', cursive;
+                margin-left: 28%;
+                padding: 10px;
+                text-decoration: none;
+                color: black;
+                border: #f5a24e 5px groove;
+                font-size: 28px;
+            }
+       
+            .b2 {
+                width: 45%;
+                height: 50px;
+                margin-top: 1000px;
+                background-color: #99e74b;
+                margin-left: 10%;
+                padding: 10px;
+                text-decoration: none;
+                color: black;
+                border: 2px black;
+                border: #f5a24e 5px groove;
+                font-size: 15px;
+                font-family: 'Press Start 2P', cursive;
+            }
+     
+            .b1:hover {
+                color: #f5a24e;
+                text-decoration: none;
+            }
+            
+            .b2:hover {
+                color: #f5a24e;
+                text-decoration: none;
+            }
+
+                .tips {
+                font-family: 'candara';
+                font-weight: bolder;
+                text-align: center;
+                font-size: 30px;
+                color: red; 
+            }
+
+                .instructions1 {
+                font-family: 'candara';
+                font-weight: bold;
+                line-height: 80px;
+                font-size: 25px;
+                color: black; 
+            }
+    </style>
+    </head>
+    
+    <body>
+        <section class="showcase">
+        <h1>Flappy Bird</h1>
+        <div class="instructions">
+            <p class="t1">INSTRUCTIONS & TIPS</p>
+            <ol class="instructions1">
+                <li>Left click to fly.</li>
+                <li>Avoid touching the green pipes.</li>
+                <li>Avoid touching the bottom borders.</li>
+                <li>Stay calm and enjoy the game!</li>
+            </ol>
+            <p class="tips">Pro Tip: Find the right rhythm and don't rush.</p>
+        </div>
+        <div class="game">
+            <p class="t2">Are you ready to play now?</p>
+            <a href="game.html" class="b1">START</a>
+        </div>
+        <div class="about">
+            <p class="t3">Want to learn more about the developers?</p>
+            <a href="about.html" class="b2">ABOUT THE DEVELOPERS</a>
+        </div>
+        </section>
+    </body>
+</html>

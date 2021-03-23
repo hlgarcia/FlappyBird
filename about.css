@@ -1,0 +1,173 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+        
+::-webkit-scrollbar-thumb {
+    background: #3074a0;
+    border-radius: 5px;
+}
+
+#navbar{
+    background-color: #0099cb;
+    background-position: center center;
+    height: 20pt;
+    font-size: 12pt;
+    font-family: 'verdana';
+    padding-top: 12pt;
+    padding-bottom: 18pt;               
+}
+
+#nav-right {
+    float: right;
+    padding-top: 4pt;
+    padding-right: 15pt; 
+}
+
+#nav-left {
+    float: left;
+    padding-top: 4pt;
+    padding-left: 15pt;
+}
+
+td a {
+    color: white;
+    padding-left: 8pt;
+    padding-right: 8pt;
+    text-decoration: none;
+}
+
+td a:hover{
+    color: #57624f;
+    padding-top: 12pt;
+    padding-bottom: 18pt;
+    text-decoration: none;
+}
+
+.title {
+    background: url(https://scontent.fcrk1-1.fna.fbcdn.net/v/t1.15752-9/97777515_243017903622028_2424405512700297216_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=ae9488&_nc_ohc=HbMbvc7ApKgAX8eafAB&_nc_ht=scontent.fcrk1-1.fna&oh=b3624143d6d674baef9adde99bc1b427&oe=60736C26);
+    height: 760px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    text-align: center;
+    padding-top: 100px;
+    color: white;
+}
+      
+h1 {
+    margin-bottom: 30px;
+    margin-top: 50px;
+    font-size: 80px;
+    font-family: 'Ranchers', cursive;
+}
+
+.sub {
+    font-size: 20px;
+    font-family: 'candara';
+    padding-left: 200px;
+    padding-right: 200px;
+    color: white;
+}  
+
+.tadeo {
+    background-color: #f7fcfc;
+    margin-bottom: 0;
+    height: 290px;
+}
+
+.garcia {
+    background-color: #a0d1ce;
+    margin-bottom: 0;
+    height:290px;
+}
+
+.magcalas {
+    background-color: #f7fcfc;
+    margin-bottom: 0;
+    height:290px;
+}
+
+.evangelista {
+    background-color: #a0d1ce;
+    margin-bottom: 0%;
+    height:290px;
+}         
+        
+.photo_t {
+    margin-top: 80px;
+    margin-bottom: 70px;
+    margin-left: 50px;
+    float: left;        
+}
+
+.photo_g {
+    margin-top: 80px;
+    margin-bottom: 70px;
+    margin-left: 50px;
+    float: left;        
+}
+
+.photo_m {
+    margin-top: 80px;
+    margin-bottom: 70px;
+    margin-left: 50px;
+    float: left;        
+}
+
+.photo_e {
+    margin-top: 80px;
+    margin-bottom: 70px;
+    margin-left: 50px;
+    float: left;  
+}
+
+.n {
+    font-size: 30px;
+    margin-left: 250px;
+    padding-top: 50px;
+}
+
+p {
+    font-family: 'candara';
+    margin: 10px 10px 10px 10px;
+}
+
+.description {
+    text-align: justify;
+    line-height: 50px;
+    margin-left: 250px;
+    margin-right: 100px;
+    font-size: 20px;
+}
+
+.email {
+    color: #0099cb;
+    margin-left: 70px;
+}
+
+.email-t {
+    color: #0099cb;
+    margin-left: 70px;
+}
+
+.tadeo:hover {
+    transform: scale(1, 1.05);
+}
+
+.garcia:hover {
+    transform: scale(1, 1.05);
+}
+
+.magcalas:hover {
+    transform: scale(1, 1.05);
+}
+
+.evangelista:hover {
+    transform: scale(1, 1.05);
+}

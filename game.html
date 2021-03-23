@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" onclick="jump()">
+    <head>
+        <title>Flappy Bird Game</title>
+        <link rel="stylesheet" href="game.css">
+        
+        <meta charset="utf-8">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Verdana' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    </head>
+    
+    <body>
+        <div id="navbar">
+            <div id="nav-left">
+                <table>
+					<tr>
+						<td><a href="index.html">Home</a></td>
+						<td><a href="game.html">Game</a></td>
+					</tr>
+                </table>
+            </div>
+            <div id="nav-right">
+                <table>
+                    <tr>
+                        <td><a href="about.html">About the Developers</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br>
+        <p class="title">Flappy Bird</p>
+        <br>
+        <p id="score">Score: 0</p>
+        <br>
+        <div>
+            <button class = "btn-color1" onclick="play()">START</button>
+            <button class = "btn-color2" onclick="pause()">STOP</button>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+        
+        <div id="game">
+            <div id="wall"></div>
+            <div id="gap"></div>
+            <div id="bird"></div>
+        </div>
+        
+        <script>
+            var wall = document.getElementById("wall");
+            var gap = document.getElementById("gap");
+            var bird = document.getElementById("bird");
+            var jumping = 0;
+            var score = 0;
+            var audioOne = new Audio('pass.mp3');
+            var audioTwo = new Audio('lose.mp3');
+            var state = "paused";
+            audioOne.volume = 0.2;
+        
+            gap.addEventListener("animationiteration", function () {
+                var random = -((Math.random() * 200) + 150);
+                gap.style.top = random + "px";
+                audioOne.play();
+                score++;    
+            }, false);
+        
+            setInterval(function() {
+                if (state == "playing") {
+                    var birdTop =   parseInt(window.getComputedStyle(bird).getPropertyValue("top"));
+        
+                    if (jumping === 0) {
+                    bird.style.top = (birdTop + 3) + "px";
+                    }
+         
+                    var wallLeft = parseInt(window.getComputedStyle(wall).getPropertyValue("left"));
+                    var gapTop = parseInt(window.getComputedStyle(gap).getPropertyValue("top"));
+                    var birdTop = parseInt(window.getComputedStyle(bird).getPropertyValue("top"));
+                    var bTop = -(655 - birdTop);
+          
+                    if((birdTop>636)||((wallLeft < 20)&&(wallLeft > -50)&&((bTop < gapTop)||(bTop > gapTop + 92)))) {
+                        audioTwo.play();
+                        state = "paused";
+                        wall.style.animationPlayState = "paused";
+                        gap.style.animationPlayState = "paused";
+                        alert("Nice try, play again? Your Final Score is: " + score);
+                       
+                        window.location.reload();
+                    }   
+                    document.getElementById("score").innerHTML = "Score: " + score;
+                }
+            }, 10);
+
+            function jump() {
+                if (state == "playing") {
+                    jumping = 1;
+                    let jumpCount = 0;
+                    var jumpInterval = setInterval(function() {
+                        var birdTop =   parseInt(window.getComputedStyle(bird).getPropertyValue("top"));
+                        if ((birdTop>259)&&(jumpCount<15)) {
+                            bird.style.top = (birdTop - 5) + "px";
+                        }
+
+                        if (jumpCount>30){
+                            clearInterval(jumpInterval);
+                            jumping = 0;
+                            jumpCount = 0;
+                        }
+                        jumpCount ++;
+                    }, 10);
+                }
+            }
+
+            function play() {
+                state = "playing";
+                wall.style.animationPlayState = "running";
+                gap.style.animationPlayState = "running";
+            }
+
+            function pause() {
+                state = "paused";
+                wall.style.animationPlayState = "paused";
+                gap.style.animationPlayState = "paused";
+            }
+            
+        </script>
+    </body>
+</html>
